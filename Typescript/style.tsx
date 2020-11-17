@@ -8,20 +8,12 @@
  * @format
  */
 
-import {
-  SafeAreaView,
-  PermissionsAndroid,
-  StyleSheet,
-
-} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 import {
-  Header,
-  LearnMoreLinks,
   Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+  } from 'react-native/Libraries/NewAppScreen';
+
 
 export const styles = StyleSheet.create({
   scrollView: {
@@ -60,4 +52,24 @@ export const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+  placeholder: {
+    color: 'purple',
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
+ 
+
 });
+//tijdelijk nog in app.tsx, dit is de styling zodat de regels dropdown ook de huidige waarde correct toont.
+export const pickerSelectStyles = StyleSheet.create({ 
+  inputAndroid: {
+    fontSize: 16,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    borderWidth: 0.5,
+    borderColor: 'purple',
+    borderRadius: 8,
+    color: 'black',
+    paddingRight: 30, // to ensure the text is never behind the icon
+  }
+})
