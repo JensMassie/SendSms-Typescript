@@ -14,6 +14,14 @@ export module SendTextHelper{
         });
     }
 
+    export function sendSMSFunctionWith(SmsNumber : String, SmsValue = String) {
+        console.log(getSmsNumber());
+        //vraag de huidige waardes op van het telefoonnummer en het bericht
+        SendSMS.send(123, SmsNumber, SmsValue, (msg: any)=>{
+            console.log(msg)
+        });
+    }
+
     //Elke keer als er een nieuw character in de textinput van het Phone number wordt geplaatst, update deze waarde. 
     export function updateSmsNumber(value: string){
         TextInputNumber = value;
